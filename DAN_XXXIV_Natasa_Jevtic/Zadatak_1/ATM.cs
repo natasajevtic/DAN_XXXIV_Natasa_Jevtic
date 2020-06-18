@@ -33,16 +33,16 @@ namespace Zadatak_1
             lock (locker)
             {               
                 int amount = random.Next(100, 10000);
-                Console.WriteLine("Customer {0} trying to withdraw amount {1} from ATM {2}.", ++customerNumber, amount, id);
+                Console.WriteLine("Customer {0} is trying to withdraw amount of {1} RSD from ATM {2}.", ++customerNumber, amount, id);
                 if (money >= amount)
                 {
                     money -= amount;
-                    Console.WriteLine("Customer {0} withdraw amount {1} from ATM {2}.", customerNumber, amount, id);
-                    Console.WriteLine("Money in bank after withdraw: {0}", money);
+                    Console.WriteLine("Customer {0} withdraw amount of {1} RSD from ATM {2}.", customerNumber, amount, id);
+                    Console.WriteLine("Money in bank after withdraw: {0} RSD", money);
                 }
                 else
                 {
-                    Console.WriteLine("Customer {0} cannot withdraw amount {1} from ATM {2}.", customerNumber, amount, id);
+                    Console.WriteLine("Customer {0} cannot withdraw amount of {1} RSD from ATM {2}.", customerNumber, amount, id);
                 }
             }           
         }        
